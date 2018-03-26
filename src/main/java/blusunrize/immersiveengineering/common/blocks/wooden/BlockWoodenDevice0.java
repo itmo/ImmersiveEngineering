@@ -65,6 +65,7 @@ public class BlockWoodenDevice0 extends BlockIETileProvider<BlockTypes_WoodenDev
 	{
 		if(meta==BlockTypes_WoodenDevice0.WORKBENCH.getMeta())
 			return "workbench";
+        //TBD should return something special for tradingtable
 		if(Config.seaonal_festive && (meta==BlockTypes_WoodenDevice0.CRATE.getMeta()||meta==BlockTypes_WoodenDevice0.REINFORCED_CRATE.getMeta()||meta==BlockTypes_WoodenDevice0.GUNPOWDER_BARREL.getMeta()))
 			return "festive";
 		return null;
@@ -388,6 +389,8 @@ public class BlockWoodenDevice0 extends BlockIETileProvider<BlockTypes_WoodenDev
 				return new TileEntityTurntable();
 			case FLUID_SORTER:
 				return new TileEntityFluidSorter();
+            case TRADINGTABLE:
+                return new TileEntityTradingTable();
 		}
 		return null;
 	}
