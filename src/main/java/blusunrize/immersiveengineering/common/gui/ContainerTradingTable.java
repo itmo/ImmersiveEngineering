@@ -169,7 +169,8 @@ extends ContainerIEBase<TileEntityTradingTable>
                             int slotNumer, 
                             Slot slotObject)
         {
-            //check that trade has been made
+            //check that trade has been made,or will be made with
+            //this click
             return false;
         }    
     }
